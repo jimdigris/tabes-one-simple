@@ -1,0 +1,33 @@
+.tabs_wrap {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+} 
+
+.tabs_wrap .tab_title {
+	display: inline-block;
+    padding: 10px 20px;
+    margin-right: -6px;
+    cursor: pointer;
+    border: 2px solid #efefef;
+	background: #ffffff;
+	color: #4c4c4c;
+}
+
+.tabs_wrap .tab_content {
+	border: 2px solid #efefef;
+    padding: 20px;
+    margin-top: -2px;
+	background: #ffffff;
+	display: none;
+}
+
+.tabs_wrap .active_title {
+	border-bottom-color: #ffffff;
+	border-top-color: #f35454;
+	color: #000000;
+}
+
+.tabs_wrap .active_content {
+	display: block;
+}
