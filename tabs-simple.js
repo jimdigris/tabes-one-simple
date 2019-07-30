@@ -1,5 +1,5 @@
 // "Вкладки, табы"
-// 23-07-2019
+// 30-07-2019
 
 'use strict';
 
@@ -11,12 +11,20 @@
 	};
 	
 	for (let i = 0; i < tabs.title.length; i++) {
-		tabs.title[i].addEventListener('click', onTabTitleClick);
-	}
-	
-	
-	function onTabTitleClick () {
-		console.log('d');
+		tabs.title[i].addEventListener('click', function () {
+			onTabTitleClick(i);
+		});
+	}	
+
+	function onTabTitleClick (i) {
+		tabs.title[i].classList.add('active_title');
+		tabs.content[i].classList.add('active_content');
+
+		for (let j = 0; j < tabs.title.length; j++) {	
+			if (j !== i) {
+				tabs.title[j].classList.remove('active_title');
+				tabs.content[j].classList.remove('active_content');
+			}
+		}
 	}
 })();
- 
